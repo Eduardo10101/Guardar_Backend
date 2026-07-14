@@ -89,7 +89,6 @@ router.post('/cadastro', async (req, res) => {
 
 });
 
-
 // ==========================
 // LOGIN
 // ==========================
@@ -101,10 +100,7 @@ router.post('/login', async (req, res) => {
 
     try {
 
-        const {
-            email,
-            senha
-        } = req.body;
+        const { email, senha } = req.body;
 
         const [usuarios] = await db.execute(
             'SELECT * FROM usuarios WHERE email = ?',
