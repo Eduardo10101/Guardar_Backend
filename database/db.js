@@ -10,7 +10,7 @@ const conexao = mysql.createPool({
 
     database: process.env.DB_NAME,
 
-    port: process.env.PORT,
+    port: process.env.DB_PORT,
 
 
     waitForConnections: true,
@@ -27,7 +27,7 @@ const conexao = mysql.createPool({
 });
 
 
-conexao.on('connection', function (connection) {
+conexao.on('connection', function () {
 
     console.log('Nova conexão MySQL criada');
 
