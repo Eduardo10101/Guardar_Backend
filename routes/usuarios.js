@@ -346,7 +346,8 @@ res.status(500).send(
 
 
 router.post('/login', async(req,res)=>{
-
+    console.log('LOGIN RECEBIDO');
+    console.log(req.body);
 
 try{
 
